@@ -16,7 +16,7 @@ use WeDevelop\SvgImage\Assets\Svg;
  */
 class MigrateCurrentSvgsTask extends BuildTask
 {
-    protected $title = 'Migrate svg files into the svg image file type';
+    protected string $title = 'Migrate svg files into the svg image file type';
 
     /** @config */
     private static string $segment = 'migrate-svg-files';
