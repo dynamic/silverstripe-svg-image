@@ -8,6 +8,7 @@ use enshrined\svgSanitize\Sanitizer;
 use Psr\Log\LoggerInterface;
 use SilverStripe\Assets\Image;
 use SilverStripe\Assets\Storage\DBFile;
+use SilverStripe\Core\Injector\Injector;
 use SVG\SVG as SVGParser;
 
 /**
@@ -52,7 +53,7 @@ class Svg extends Image
             try {
                 $this->svg = SVGParser::fromString($this->File->getString());
             } catch (\Exception $e) {
-                $this->logger?->error($e->getMessage());
+                Injector::inst()->get(LoggerInterface::class)->error($e->getMessage());
             }
         }
     }
