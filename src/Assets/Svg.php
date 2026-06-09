@@ -29,7 +29,7 @@ class Svg extends Image
 
     private ?SVGParser $svg = null;
 
-    public LoggerInterface $logger;
+    private ?LoggerInterface $logger = null;
 
     /**
      * @config
@@ -52,7 +52,7 @@ class Svg extends Image
             try {
                 $this->svg = SVGParser::fromString($this->File->getString());
             } catch (\Exception $e) {
-                $this->logger->error($e->getMessage());
+                $this->logger?->error($e->getMessage());
             }
         }
     }
