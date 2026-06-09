@@ -30,16 +30,6 @@ class Svg extends Image
 
     private ?SVGParser $svg = null;
 
-    private ?LoggerInterface $logger = null;
-
-    /**
-     * @config
-     * @var array<string, string>
-     */
-    private static array $dependencies = [
-        'logger' => '%$' . LoggerInterface::class,
-    ];
-
     /**
      * @param array<mixed>|null $record
      * @param bool|int $isSingleton
