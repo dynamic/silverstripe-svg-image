@@ -14,7 +14,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.3",
-        "enshrined/svg-sanitize": "^0.22",
+        "enshrined/svg-sanitize": "^1.0",
         "meyfa/php-svg": "^0.14.5",
         "silverstripe/framework": "^6"
     },
